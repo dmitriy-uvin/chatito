@@ -1,0 +1,232 @@
+@import "react-redux-toastr/src/styles/index"
+@import ./colors
+@import ./reset
+@import ./fonts
+
+.full-screen
+  width: 100%
+  height: 100%
+
+.noselect
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+body
+  font-family: 'Raleway', sans-serif
+  overflow: hidden
+
+.button-unstyled
+  background: none
+  border: 0
+  color: inherit
+  font: inherit
+  margin: 0
+  line-height: inherit
+  overflow: initial
+  padding: 0
+  text-align: initial
+  vertical-align: initial
+  cursor: pointer
+  &:hover
+    cursor: pointer
+
+// Emoji popup
+
+.tox .tox-button
+  background-color: var(--modal-button-background) !important
+  border-color: var(--modal-button-background) !important
+
+  &:hover
+    background-color: var(--modal-button-background-hover) !important
+
+.tox .tox-button--naked
+  background-color: transparent !important
+  border-color: transparent !important
+
+  &:hover
+    background-color: var(--modal-emoji-hover) !important
+
+.tox .tox-textfield
+  &:focus
+    border-color: var(--modal-input-border) !important
+
+.tox .tox-collection__item
+  &:hover
+    background-color: var(--modal-emoji-hover) !important
+
+.tox .tox-collection__item--active
+  background-color: var(--modal-emoji-hover) !important
+
+.tox .tox-dialog__body-nav-item
+  &:focus
+    background-color: var(--modal-emoji-hover) !important
+
+.tox .tox-dialog__body-nav-item--active
+  border-bottom-color: var(--modal-active-text) !important
+  color: var(--modal-active-text) !important
+
+.tox .tox-dialog__header, .tox-dialog__body,  .tox-dialog__footer
+  background-color: var(--modal-window-background) !important
+
+.tox .tox-dialog-wrap__backdrop
+  background-color: rgba(0, 0, 0, 0.5) !important
+
+// Text editor styles
+
+.tox .tox-toolbar__group:last-child
+  margin-left: auto
+
+  .tox-tbtn
+    flex-direction: row-reverse
+
+.tox .tox-tbtn
+  &:hover
+    background-color: var(--chat-background-primary) !important
+
+.tox-tinymce
+  border: 1px solid var(--text-editor-border) !important
+  border-radius: 4px !important
+
+.tox .tox-edit-area__iframe
+  background-color: var(--chat-background-primary) !important
+
+.tox .tox-toolbar__primary
+  background-color: var(--chat-background-secondary) !important
+
+// bootstrap modal windows
+
+.modal-content
+  background-color: var(--chat-background-primary)
+
+.modal-body
+  h4
+    font-size: 18px
+    font-weight: 600
+    letter-spacing: .1px
+
+.form-control
+  &:focus
+    border-color: var(--auth-scene-btn-background)
+    box-shadow: 0 0 0 0.05rem var(--auth-scene-btn-background)
+
+small
+  font-size: 12px
+
+.blueToastrNotification
+  background-color: #5aa2fa !important
+  &:hover
+    cursor: pointer !important
+
+.arrow
+  display: none !important
+
+.react-calendar__tile--active,
+.react-calendar__tile--active:hover
+  background: var(--primary) !important
+
+.react-datetime-picker__wrapper
+  height: 38px
+  border-radius: 3px !important
+  outline: none
+  border: 1px solid var(--input-border) !important
+  background-color: var(--white-bg)
+
+.form-check-input
+  margin-top: 0
+  margin-bottom: 1px
+
+// modals
+
+.modalHeader
+  font-size: 21px
+  font-weight: 700
+  width: 100%
+  margin-bottom: 25px
+
+.modalBody
+  padding: 0 8px
+
+.buttonsContainer
+  padding: 0 8px 6px
+  width: 100%
+  display: flex
+  justify-content: flex-end
+
+.authButton
+  cursor: pointer !important
+  line-height: 1
+  &:hover, &:active, &:focus
+    box-shadow: none !important
+    outline: none !important
+    cursor: pointer !important
+
+.appButton
+  padding: 0
+  font-size: 14px
+  height: 34px
+  width: 67px
+  min-height: 34px
+  min-width: 67px
+  font-weight: 600
+  margin-left: 14px
+  cursor: pointer !important
+  line-height: 1
+  &:hover, &:active, &:focus
+    box-shadow: none !important
+    outline: none !important
+    cursor: pointer !important
+
+.save
+  border: none
+  background-color: var(--icon-active)
+  &:hover, &:active, &:disabled
+    background-color: var(--save-button-bg-hover) !important
+  &:focus
+    background-color: var(--icon-active)
+
+.danger
+  color: var(--white-bg)
+  border: none
+  background-color: var(--danger-button-bg)
+  &:hover, &:active, &:disabled
+    background-color: var(--danger-button-bg-hover) !important
+  &:focus
+    background-color: var(--danger-button-bg)
+
+.back
+  background-color: transparent
+  border-color: var(--back-btn-border)
+  color: var(--back-btn-hover)
+  &:hover, &:active, &:disabled
+    color: var(--white-bg)
+    border-color: var(--back-btn-hover)
+    outline: none
+    background-color: var(--back-btn-hover) !important
+  &:focus
+    outline: none
+    border-color: var(--back-btn-border) !important
+    background-color: var(--back-btn-hover)
+
+.createChannel
+  width: 130px
+  margin: 0
+
+.deleteAccount
+  width: 125px
+  margin-left: 0
+
+.inputField
+  height: 36px
+
+.go2646822163, .dropdown-container, .go2642161244, .dropdown-heading, .react-datetime-picker__wrapper
+  height: 36px !important
+
+.react-datetime-picker__wrapper
+  padding: 0 8px
+
+.react-datetime-picker__inputGroup
+  cursor: pointer

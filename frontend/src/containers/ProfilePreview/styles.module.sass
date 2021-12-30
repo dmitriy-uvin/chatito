@@ -1,0 +1,32 @@
+@mixin buttonReset
+  border: none
+  padding: 0
+  width: auto
+  overflow: visible
+  background: transparent
+  color: inherit
+  font: inherit
+  line-height: normal
+  -webkit-font-smoothing: inherit
+  -moz-osx-font-smoothing: inherit
+  -webkit-appearance: none
+  &::-moz-focus-inner
+      border: 0
+      padding: 0
+  &:focus
+    outline: none
+
+.popOverWindow
+  width: 320px
+  min-width: 320px
+  z-index: 102
+  box-shadow: 0 0 0 1px rgba(29, 28, 29, 0.1),0 0px 12px 0 rgba(0,0,0,.05)
+  border-radius: 6px
+  border: none
+
+.link
+  @include buttonReset
+  color: var(--icon-active)
+  font-size: 16px
+  &:hover
+    text-decoration: underline

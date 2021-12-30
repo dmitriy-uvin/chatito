@@ -1,0 +1,67 @@
+.channelItem
+  min-height: 76px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  position: relative
+  margin: 10px 0
+  background-color: var(--chat-background-secondary)
+  border-radius: 6px
+  padding: 18px
+  position: relative
+  box-sizing: border-box
+  cursor: pointer
+  &:first-child
+    margin-top: 0
+  &:last-child
+    margin-bottom: 0
+
+.channelItem:hover
+  background-color: var(--chat-background-secondary)
+
+.goToChannelLink
+  width: 100%
+
+.channel
+  position: relative
+
+.channelName
+  font-size: 15px
+  font-weight: 600
+  margin-bottom: 8px
+  color: var(--main-text)
+
+.channelName svg
+  margin-right: 3px
+
+.chatInfo
+  height: 14px
+  font-size: 13px
+  color: var(--secondary-text)
+
+.channelBtn
+  visibility: hidden
+  position: absolute
+  top: 50%
+  right: 18px
+  transform: translateY(-50%)
+  width: 75px
+
+.channelItem:hover .channelBtn
+  visibility: visible
+
+.channelBtn div
+  margin-left: 5px
+
+.chatInfo
+  display: flex
+
+.joined
+  margin-right: 10px
+  color: var(--browser-channel-joined)
+
+.joined .checkIcon
+  margin-right: 4px
+
+.participants
+  margin-right: 10px

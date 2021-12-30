@@ -1,0 +1,123 @@
+@mixin status
+  content: ""
+  height: 10px
+  width: 10px
+  border-radius: 100px
+  display: inline-block
+  margin-left: 5px
+  display: inline-block
+
+@mixin buttonReset
+  border: none
+  padding: 0
+  width: auto
+  overflow: visible
+  background: transparent
+  color: inherit
+  font: inherit
+  line-height: normal
+  -webkit-font-smoothing: inherit
+  -moz-osx-font-smoothing: inherit
+  -webkit-appearance: none
+  &::-moz-focus-inner
+    border: 0
+    padding: 0
+  &:focus
+    outline: none
+
+.profilePreviewContainer
+  width: 100%
+  height: 100%
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  padding: 12px 0
+
+.contentBody
+  display: flex
+  justify-content: space-between
+  padding: 0 12px
+
+.infoContainer
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  max-width: 207px
+
+.avatar
+  object-fit: cover
+  margin-bottom: 10px
+
+.fullname
+  font-size: 20px
+  font-weight: 600
+  line-height: 23px
+  margin-bottom: 5px
+  color: var(--title-text)
+  word-break: break-word
+
+.online:after
+  @include status
+  background-color: var(--icon-active)
+
+.offline:after
+  @include status
+  background-color: var(--offline)
+
+.title
+  margin: 2px 0
+  font-size: 14px
+
+.link
+  @include buttonReset
+  color: var(--icon-active)
+  font-size: 15px
+  font-weight: 500
+  margin: 3px 0 2px
+  &:hover
+    text-decoration: underline
+  &:nth-child(2)
+    margin-left: 15px
+
+.textField
+  resize: none
+
+.arrowIcon
+  color: var(--offline)
+  font-size: 22px
+  transition: all .3s
+
+.sendMessageBlock
+  display: flex
+  align-items: flex-end
+  margin: 5px 0 0 0
+  padding: 0 12px
+
+.arrowButton
+  width: 40px
+  height: 38px
+  cursor: pointer
+  margin: 0 0 0 10px
+  display: flex
+  justify-content: center
+  align-items: center
+  outline: none
+  background-color: transparent
+  &:hover .arrowIcon
+    color: var(--close-button-hover)
+  &_reset
+    @include buttonReset
+
+.statusContainer
+  max-width: 200px
+
+.userStatus
+  font-size: 14px
+  margin: 2px 0
+  min-width: 200px
+
+.line
+  height: 2px
+  width: 100%
+  background: var(--crop-bg)
+  margin: 5px 0

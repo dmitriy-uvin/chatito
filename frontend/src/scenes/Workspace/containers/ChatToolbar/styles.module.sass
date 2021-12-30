@@ -1,0 +1,256 @@
+$color: var(--workspace-toolbar-select-background)
+$colorText: var(--title-text)
+@mixin marker
+  min-width: 24px
+  height: 24px
+  display: flex
+  justify-content: center
+  align-items: center
+  margin-left: 3px
+  height: 100%
+
+.muteIcon
+  opacity: 0.4
+
+.leftToolbar
+  padding: 15px 0
+  top: 0px
+  left: 10px
+  height: 100%
+  background-color: $color
+  overflow-y: auto
+
+  -ms-overflow-style: none
+  scrollbar-width
+  &::-webkit-scrollbar
+    display: none
+
+.channelSelect
+  height: 34px
+  background: none
+  display: flex
+  align-items: center
+  border: 0
+  padding: 0 9px 0 23px
+  outline: none
+  width: 100%
+  color: $colorText
+  cursor: pointer
+  position: relative
+  max-width: 275px
+
+
+a.channelSelect
+  color: $colorText
+  text-decoration: none
+
+  &:hover
+    color: $colorText
+    text-decoration: none
+    color: $colorText !important
+    text-decoration-color: none
+
+.iconWrapper
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 22px
+  min-width: 22px
+
+.channelSelectActive
+  composes: channelSelect
+  background-color: var(--chat-background-primary)
+
+.channelCurrent
+  background-color: var(--chat-background-primary)
+
+
+.chatBlock
+  justify-content: space-between
+  display: flex
+  width: 100%
+  height: 100%
+
+.chatBlockContainer
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  width: 100%
+
+.channelNameWrapper
+  display: flex
+  height: 34px
+  width: 100%
+  align-items: center
+  overflow: hidden
+
+.emoji
+  height: 100%
+  display: flex
+  align-items: center
+
+.youMarkerContainer
+  width: 35px
+  min-width: 35px
+  height: 100%
+  display: flex
+  align-items: center
+
+.iconBorder
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 19px
+  height: 19px
+  font-size: 10px
+  color: var(--workspace-background-color)
+  border: 1px solid var(--workspace-background-color)
+  border-radius: 50%
+
+.buttonTextContainer
+  display: flex
+  align-items: center
+  height: 100%
+  overflow: hidden
+
+.buttonText
+  margin-left: 10px
+  text-align: start
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+
+.addButtonText
+  margin-left: 10px
+  font-size: 14px
+  font-weight: bold
+  color: var(--workspace-background-color)
+
+.onlineSign
+  position: relative
+  float: left
+  width: 10px
+  min-width: 10px
+  height: 10px
+  border-radius: 5px
+  background-color: var(--user-detector-online)
+  margin-left: 3px
+
+.metkaOfLine
+  position: relative
+  float: left
+  width: 10px
+  height: 10px
+  border-radius: 5px
+  border: 2px solid gray
+  margin-top: 2px
+  margin-left: 3px
+
+.channelSelect:hover
+  color: $colorText
+  background-color: var(--chat-background-primary)
+
+.channelSelect:active
+  color: $colorText
+  background-color: var(--chat-background-primary)
+
+.channelButtonsWrapper
+  display: flex
+  width: 80%
+  flex-wrap: nowrap
+  justify-content: space-around
+
+
+.buttonChannel
+  margin-top: 40px
+
+  button
+    span
+      font-size: 16px
+      font-weight: 600
+
+.buttonSelect
+  display: flex
+  flex-direction: row
+  justify-content: flex-start
+  align-items: center
+  padding: 5px
+  padding-left: 25px
+  border: 0
+  outline: none
+  width: 100%
+  color: $colorText
+  background-color: $color
+
+.chanelsImg
+  transition-property: transform
+  transition-duration: 500ms
+  transform: rotate(90deg)
+
+.chanelsImgRotate
+  transition-property: transform
+  transition-duration: 500ms
+  transform: none
+
+.buttonSelect:hover
+  background-color: var(--chat-background-primary)
+
+.listBox
+  overflow: hidden
+  height: auto
+
+.listBoxHidden
+  overflow: hidden
+  height: 0
+
+.unreadContainer
+  right: 8px
+  height: 100%
+  display: flex
+  align-items: center
+
+  .unreadCircle
+    background-color: var(--icon-hover)
+    border-radius: 20px
+    width: 24px
+    height: 24px
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-left: 5px
+
+    .unreadAmount
+      font-family: var(--secondary-font-family), sans-serif
+      font-size: 16px
+      font-weight: 500
+      color: var(--text-color-for-dark-bg)
+
+    .unreadAmountNineMore
+      letter-spacing: -2px
+
+.markers
+  display: flex
+  align-items: center
+  height: 100%
+
+.markerContainer
+  @include marker
+  &:first-child
+    margin-left: 6px
+
+.youMarker
+  min-width: 35px
+
+.popOverWindow
+  z-index: 102
+  box-shadow: 0 0 0 1px rgba(29, 28, 29, 0.1),0 0px 12px 0 rgba(0,0,0,.05)
+  border-radius: 6px
+  background-color: var(--workspace-toolbar-background)
+  color: var(--text-color-for-dark-bg)
+  border: none
+  padding: 6px 12px
+  font-size: 14px
+  line-height: 1.35
+  font-weight: 500
+  text-align: center
+  max-width: 160px

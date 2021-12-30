@@ -1,0 +1,37 @@
+.body
+  background-color: var(--chat-background-primary)
+  height: 100%
+  padding: 34px 94px 0 78px
+
+  .wrapper
+    display: flex
+    flex-direction: column
+    height: 100%
+    overflow-y: auto
+    max-height: calc(100vh - 78px - 63px - 34px - 34px )
+
+  .wrapper
+    -ms-overflow-style: none  /* Internet Explorer 10+ */
+    scrollbar-width: none  /* Firefox */
+    &::-webkit-scrollbar
+      display: none  /* Safari and Chrome */
+
+  .wrapper a:hover
+    text-decoration: none
+
+.draftsHeaderBlock
+  width: 100%
+  height: 63px
+  box-sizing: border-box
+  padding: 0 16px 0 20px
+  border-bottom: 1px solid #EFEDE1
+  display: flex
+  align-items: center
+  font-size: 16px;
+  font-weight: 800;
+  background-color: var(--chat-background-primary)
+
+@media screen and (max-width: 1440px)
+  .body
+    .wrapper
+      max-height: calc(100vh - 63px - 63px - 34px - 34px)

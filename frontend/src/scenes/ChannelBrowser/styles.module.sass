@@ -1,0 +1,110 @@
+.ChannelBrowser
+  background-color: var(--chat-background-primary)
+  height: calc(100vh - 78px)
+
+.header
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 13px 96px 13px 20px
+  height: 63px
+  border-bottom: 1px solid var(--workspace-toolbar-select-background)
+  font-weight: 800
+  color: var(--title-text)
+
+.headerName
+  margin-right: 20px
+  white-space: nowrap
+
+.main
+  padding: 34px 94px 0 78px
+  display: flex
+  flex-direction: column
+  flex: 1 1
+  height: calc(100vh - 104px)
+  color: var(--main-text)
+
+.controlsWrp
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding-bottom: 16px
+  font-size: 15px
+  font-weight: 500
+  margin-left: 3px
+  font-family: var(--secondary-font-family), sans-serif
+
+.buttonsWrapper
+  display: flex
+  padding-right: 3px
+
+.channelsWrp
+  overflow-y: auto
+  display: flex
+  flex-direction: column
+  max-height: calc(100vh - 78px - 63px - 62px - 34px - 50px - 16px )
+
+.channelsWrp
+  -ms-overflow-style: none  /* Internet Explorer 10+ */
+  scrollbar-width: none  /* Firefox */
+  &::-webkit-scrollbar
+    display: none  /* Safari and Chrome */
+
+.channelsWrp a:hover
+  text-decoration: none
+
+.center
+  height: 78px
+  display: flex
+  align-items: center
+  justify-content: center
+
+.createBtn
+  font-weight: 600
+  font-size: 15px
+  background-color: var(--browser-channel-secondary-button)
+  border: 1px solid var(--browser-channel-border)
+  color: var(--main-text)
+  padding: 6px 12px
+  border-radius: .25rem
+  line-height: 1.5
+
+.channelsWrp .createBtn
+  margin-top: 40px
+  margin-bottom: 40px
+
+.createBtn:hover,
+.createBtn:active
+  background-color: var(--browser-channel-secondary-button-hover)
+  border: 1px solid var(--browser-channel-border)
+  color: var(--main-text)
+
+.createBtn:active,
+.createBtn:focus
+  box-shadow: 0 0 0 0.1rem var(--browser-channel-primary-button)
+
+@media screen and (max-width: 1440px)
+  .ChannelBrowser
+    height: calc(100vh - 62px)
+  .channelsWrp
+    max-height: calc(100vh - 62px - 63px - 62px - 34px - 50px - 16px)
+
+.searchInput
+  width: 100%
+  border-radius: 50px
+  padding-left: 40px
+
+.wrapper
+  position: relative
+  width: 50%
+
+  .searchIcon
+    position: absolute
+    opacity: 0.25
+    left: 15px
+    top: 12px
+    cursor: pointer
+    z-index: 5
+
+    &:hover
+      opacity: 0.5

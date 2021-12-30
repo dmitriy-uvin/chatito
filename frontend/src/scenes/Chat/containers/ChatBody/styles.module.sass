@@ -1,0 +1,50 @@
+.chatBody
+  display: flex
+  flex-direction: column
+  flex: 1
+  overflow-y: auto
+  overflow-x: hidden
+  padding: 15px 0 0
+  -ms-overflow-style: none  /* Internet Explorer 10+ */
+  scrollbar-width: none  /* Firefox */
+  &::-webkit-scrollbar
+    display: none  /* Safari and Chrome */
+
+.postContainer
+  width: 100%
+  position: relative
+
+.newPostBlock
+  width: 100%
+  display: flex
+  align-items: center
+  font-size: 12px
+  font-weight: 600
+  color: var(--presence-offline)
+  padding-right: 96px
+  margin: 5px 0
+  position: absolute
+  top: -2px
+  left: 0
+
+.line
+  width: 100%
+  height: 1px
+  background-color: var(--presence-offline)
+  margin-right: 5px
+
+.dateLineBlock
+  margin-top: 7px
+  width: 100%
+  margin-bottom: 10px
+  font-size: 12px
+  line-height: 14px
+  .dateText
+    color: var(--posts-devider-date)
+    white-space: nowrap
+    border-radius: 6px
+    margin: 5px 0 0 42px
+  .dateLine
+    width: 100%
+    height: 1px
+    background-color: var(--border)
